@@ -26,11 +26,19 @@ npm install
 
 ## Usage :
 
+The original code includes a downloader, but, it appears to be flaky, so I've chosen
+to make the download process manual.
+
 ```
-npm run import -- -h
+mkdir downloads
+# download files from https://data.discogs.com/?prefix=data/2020/
+gunzip *.gz
 ```
 
-usage: boot.js [-h] [-v] [-d DATE] [-f {artists,masters,releases,labels}]
+```
+npm run import -- --d 20201201 --file {artist,release}
+```
+
 
 Discogs XMLs to Elasticsearch importer
 

@@ -5,7 +5,6 @@ import Xmlparser from './Xmlparser';
 
 async function run () {
   await EsClient.checkAll(args.files);
-  await new Downloader(args.date, args.files).getDiscogsFiles();
   await new Xmlparser(args.date, args.files).importData();
 }
 

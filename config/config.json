@@ -1,7 +1,8 @@
 {
   "elasticsearch": {
-    "host": "localhost",
-    "port": "9200",
+    "url": "CHANGEME",
+    "username": "elastic",
+    "password": "CHANGEME",
     "nb_of_shards": 1,
     "nb_of_replicas": 0
   },

@@ -4,7 +4,14 @@ import util from 'util';
 import config from '../../config/config.json';
 
 const EsClient = new Elasticsearch.Client({
-  node: `http://${config.elasticsearch.host}:${config.elasticsearch.port}`,
+  node: `${config.elasticsearch.url}`,
+  auth: {
+    username: `${config.elasticsearch.username}`,
+    password: `${config.elasticsearch.password}`,
+  },
+  ssl: {
+    rejectUnauthorized: false
+  }
   // log: 'trace'
 });
 
